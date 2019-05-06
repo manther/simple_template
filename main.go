@@ -41,16 +41,19 @@ func main() {
 
 	initLog(out)
 
+	logger.Println("Simple Template beginning work.")
 	err = DoWork()
 	if err != nil {
 		log.Error("Processing error: ", err.Error())
 		os.Exit(5)
 	}
+	logger.Println("Simple Template work complete.")
 }
 
 // Work entry point
 func DoWork() error {
-	return fmt.Errorf("nothing implemented yet")
+	log.Info("Simple Template TBD.")
+	return nil
 }
 
 //Loads config settings via viper lib
